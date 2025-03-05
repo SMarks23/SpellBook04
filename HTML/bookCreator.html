@@ -1,0 +1,165 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="./../CSS/style.css">
+    <link rel="stylesheet" href="./../CSS/bookCreatorStyle.css">
+    <script src="./../JS/createModifier.js" defer></script>
+    <script src="./../JS/createFeats.js" defer></script>
+</head>
+
+<body onload="loadCreate()">
+    <div class="pageTitleCont">
+        <div class="pageTitle">
+            <h1>create book</h1>
+        </div>
+    </div>
+    <div it=creatBookOptionsCont>
+        <div class="createBookOption">
+            <div class="createBookTitleCont">
+                <div class="createBookTitle">Name</div>
+            </div>
+            <div class="createBookCont">
+                <div id=createBookNameCont>
+                    <input type="text" placeholder="Name" id=createBookName>
+                </div>
+            </div>
+        </div>
+
+        <div class="createBookOption">
+            <div class="createBookTitleCont">
+                <div class="createBookTitle">Classes</div>
+            </div>
+            <div class="createBookCont">
+                <div id=createBookClassesCont>
+                </div>
+            </div>
+        </div>
+
+        <div class="createBookOption">
+            <div class="createBookTitleCont">
+                <div class="createBookTitle">Species</div>
+            </div>
+            <div class="createBookCont">
+                <div id=createBookSpeciesCont>
+                </div>
+            </div>
+        </div>
+
+        <div class="createBookOption">
+            <div class="createBookTitleCont">
+                <div class="createBookTitle">Feats</div>
+            </div>
+            <div class="createBookCont">
+                <div id=createBookFeatsCont>
+                    <div class="featCont">
+                        <a class="feat" onclick="tapFeat(this)">Fey-Touched</a>
+                    </div>
+                    <div class="featCont">
+                        <a class="feat" onclick="tapFeat(this)">Magic Initiate  (Cleric)</a>
+                    </div>
+                    <div class="featCont">
+                        <a class="feat" onclick="tapFeat(this)">Magic Initiate  (Druid)</a>
+                    </div>
+                    <div class="featCont">
+                        <a class="feat" onclick="tapFeat(this)">Magic Initiate  (Wizard)</a>
+                    </div>
+                    <div class="featCont">
+                        <a class="feat" onclick="tapFeat(this)">Ritual Caster</a>
+                    </div>
+                    <div class="featCont">
+                        <a class="feat" onclick="tapFeat(this)">Shadow-Touched</a>
+                    </div>
+                    <div class="featCont">
+                        <a class="feat" onclick="tapFeat(this)">Telekinetic</a>
+                    </div>
+                    <div class="featCont">
+                        <a class="feat" onclick="tapFeat(this)">Telepathic</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="createBookOption">
+            <div class="createBookTitleCont">
+                <div class="createBookTitle">Modifiers</div>
+            </div>
+            <div class="createBookCont">
+                <div class="modifierSection" style="display: block">
+                    <div class="modifierNameCont">
+                        <a class="modifierName">Intelligence</a>
+                    </div>
+                    <div class="statBox">
+                        <div class="statArrow" onclick="nextModifier('-')">
+                            <a>&lt;</a>
+                        </div>
+                        <div class="statCont">
+                            <div class="modifierCont">
+                                <div class="modifierBox">
+                                    <a class="modifier">-5</a>
+                                </div>
+                                <div class="statNumberCont">
+                                    <input type="number" placeholder="0" class="statNumber" oninput="statToModifier()">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="statArrow" onclick="nextModifier('+')">
+                            <a>&gt;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modifierSection">
+                    <div class="modifierNameCont">
+                        <a class="modifierName">Wisdom</a>
+                    </div>
+                    <div class="statBox">
+                        <div class="statArrow" onclick="nextModifier('-')">
+                            <a>&lt;</a>
+                        </div>
+                        <div class="statCont">
+                            <div class="modifierCont">
+                                <div class="modifierBox">
+                                    <a class="modifier">-5</a>
+                                </div>
+                                <div class="statNumberCont">
+                                    <input type="number" placeholder="0" class="statNumber" oninput="statToModifier()">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="statArrow" onclick="nextModifier('+')">
+                            <a>&gt;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modifierSection">
+                    <div class="modifierNameCont">
+                        <a class="modifierName">Charisma</a>
+                    </div>
+                    <div class="statBox">
+                        <div class="statArrow" onclick="nextModifier('-')">
+                            <a>&lt;</a>
+                        </div>
+                        <div class="statCont">
+                            <div class="modifierCont">
+                                <div class="modifierBox">
+                                    <a class="modifier">-5</a>
+                                </div>
+                                <div class="statNumberCont">
+                                    <input type="number" placeholder="0" class="statNumber" oninput="statToModifier()">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="statArrow" onclick="nextModifier('+')">
+                            <a>&gt;</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id=addButtonCont>
+        <a>add</a>
+    </div>
+</body>
+
+</html>
